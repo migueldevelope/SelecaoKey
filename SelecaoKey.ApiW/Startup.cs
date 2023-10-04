@@ -50,6 +50,7 @@ namespace SelecaoKey.Api
             _ = services.AddScoped<IServiceMovie>(_ => new ServiceMovie(_context));
             _ = services.AddScoped<IServiceStreaming>(_ => new ServiceStreaming(_context));
             _ = services.AddScoped<IServiceRating>(_ => new ServiceRating(_context));
+            _ = services.AddScoped<IServiceMovieStreaming>(_ => new ServiceMovieStreaming(_context));
         }
         // This method gets called by the runtime. Use this method to add services to the container.
         /// <summary>

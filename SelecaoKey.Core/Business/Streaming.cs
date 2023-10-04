@@ -1,6 +1,8 @@
 ﻿using SelecaoKey.Core.Base;
 using SelecaoKey.Views.BusinessCrud;
 using SelecaoKey.Views.BusinessList;
+using System.Collections;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace SelecaoKey.Core.Business
@@ -9,6 +11,7 @@ namespace SelecaoKey.Core.Business
     [Table("Streaming")]
     public class Streaming : BaseEntity
     {
+
         public string Name { get; set; }
 
         public ViewListStreaming GetViewList()

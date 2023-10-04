@@ -11,15 +11,16 @@ using Tools;
 
 namespace SelecaoKey.Services.Business
 {
-    public class ServiceStreaming : IServiceStreaming
+    public class ServiceMovieStreaming : IServiceMovieStreaming
     {
-        private readonly Repository<Streaming> service;
-
+        private readonly Repository<MovieStreaming> service;
+        
         #region constructor
-        public ServiceStreaming(DataContext context)
+        public ServiceMovieStreaming(DataContext context)
         {
-            service = new Repository<Streaming>(context);
+            service = new Repository<MovieStreaming>(context);
         }
+
         #endregion
 
         #region crud
@@ -28,7 +29,7 @@ namespace SelecaoKey.Services.Business
             try
             {
                 service.Delete(id);
-                return "Streaming01";
+                return "MovieStreaming01";
             }
             catch (Exception e)
             {
@@ -36,7 +37,7 @@ namespace SelecaoKey.Services.Business
             }
         }
 
-        public ViewCrudStreaming Get(int id)
+        public ViewCrudMovieStreaming Get(int id)
         {
             try
             {
@@ -48,12 +49,13 @@ namespace SelecaoKey.Services.Business
             }
         }
 
-        public List<ViewListStreaming> List(int pageSize, int page, string filter)
+
+        public List<ViewListMovieStreaming> List(int pageSize, int page, string filter)
         {
             try
             {
-                return service.Get(p => p.Name.ToUpper().Contains(filter.ToUpper())).Select(p => p.GetViewList())
-                  .OrderBy(o => o.Name).Skip(pageSize * (page - 1)).Take(pageSize).ToList();
+                return service.Get(p => p.Id.ToString().ToUpper().Contains(filter.ToUpper())).Select(p => p.GetViewList())
+                  .OrderBy(o => o.Id).Skip(pageSize * (page - 1)).Take(pageSize).ToList();
             }
             catch (Exception e)
             {
@@ -61,19 +63,18 @@ namespace SelecaoKey.Services.Business
             }
         }
 
-        public string New(ViewCrudStreaming view)
+
+        public string New(ViewCrudMovieStreaming view)
         {
             try
             {
-                if (string.IsNullOrEmpty(view.Name))
+                service.Insert(new MovieStreaming()
                 {
-                    throw new Exception("Streaming02");
-                }
-                service.Insert(new Streaming()
-                {
-                    Name = view.Name
+                    IdStreaming = view.IdStreaming,
+                    IdMovie = view.IdMovie
+
                 });
-                return "Streaming04";
+                return "MovieStreaming04";
             }
             catch (Exception e)
             {
@@ -81,26 +82,18 @@ namespace SelecaoKey.Services.Business
             }
         }
 
-        public List<ViewListQuantityMovieStreamings> QuantityMovieStreamings()
-        {
-            throw new NotImplementedException();
-        }
 
-        public string Update(ViewCrudStreaming view)
+        public string Update(ViewCrudMovieStreaming view)
         {
             try
             {
-                if (string.IsNullOrEmpty(view.Name))
-                {
-                    throw new Exception("Streaming02");
-                }
-                Streaming model = service.GetByID(view.Id);
+                MovieStreaming model = service.GetByID(view.Id);
                 if (model == null)
                 {
-                    throw new Exception("Streaming03");
+                    throw new Exception("MovieStreaming03");
                 }
                 service.Update(model);
-                return "Streaming05";
+                return "MovieStreaming05";
             }
             catch (Exception e)
             {

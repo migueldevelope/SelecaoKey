@@ -77,6 +77,56 @@
             <response code="200">Return information.</response>
             <response code="400">Return error code.</response>
         </member>
+        <member name="T:SelecaoKey.Api.Controllers.MovieStreamingController">
+            <summary>
+            Controller MovieStreaming
+            </summary>
+        </member>
+        <member name="M:SelecaoKey.Api.Controllers.MovieStreamingController.#ctor(SelecaoKey.Core.Interfaces.IServiceMovieStreaming,Microsoft.AspNetCore.Http.IHttpContextAccessor)">
+            <summary>
+            Construtor controller
+            </summary>
+            <param name="_service">Service MovieStreaming</param>
+            <param name="contextAccessor">Token infomartion</param>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:SelecaoKey.Api.Controllers.MovieStreamingController.New(SelecaoKey.Views.BusinessList.ViewCrudMovieStreaming)" -->
+        <member name="M:SelecaoKey.Api.Controllers.MovieStreamingController.Update(SelecaoKey.Views.BusinessList.ViewCrudMovieStreaming)">
+            <summary>
+            Update MovieStreaming
+            </summary>
+            <param name="view">View MovieStreaming</param>
+            <response code="200">Return message: 
+            MovieStreaming05 - Update MovieStreaming success.</response>
+            <response code="400">Return error code:<br />
+            MovieStreaming03 - Id not found.</response>
+        </member>
+        <member name="M:SelecaoKey.Api.Controllers.MovieStreamingController.Get(System.Int32)">
+            <summary>
+            Get MovieStreaming to id
+            </summary>
+            <param name="id">Identifier MovieStreaming</param>
+            <response code="200">Return information.</response>
+            <response code="400">Return error code.</response>
+        </member>
+        <member name="M:SelecaoKey.Api.Controllers.MovieStreamingController.Delete(System.Int32)">
+            <summary>
+            Delete MovieStreaming to id
+            </summary>
+            <param name="id">Identifier MovieStreaming</param>
+            <response code="200">Return message:
+            MovieStreaming01 - Deleted MovieStreaming success.</response>
+            <response code="400">Return error code.</response>
+        </member>
+        <member name="M:SelecaoKey.Api.Controllers.MovieStreamingController.Get(System.Int32,System.Int32,System.String)">
+            <summary>
+            List MovieStreamings
+            </summary>
+            <param name="filter">Filter name MovieStreaming (optional)</param>
+            <param name="page">Page to list (optional - Default: 1)</param>
+            <param name="pageSize">Page size to list (optional - Default: 10)</param>
+            <response code="200">Return information.</response>
+            <response code="400">Return error code.</response>
+        </member>
         <member name="T:SelecaoKey.Api.Controllers.RatingController">
             <summary>
             Controller Rating

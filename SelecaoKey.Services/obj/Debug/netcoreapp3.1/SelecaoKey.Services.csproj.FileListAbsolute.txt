@@ -1,8 +1,3 @@
-C:\selecaokey\SelecaoKey\SelecaoKey.Services\obj\Debug\netcoreapp3.1\SelecaoKey.Services.csproj.AssemblyReference.cache
-C:\selecaokey\SelecaoKey\SelecaoKey.Services\obj\Debug\netcoreapp3.1\SelecaoKey.Services.GeneratedMSBuildEditorConfig.editorconfig
-C:\selecaokey\SelecaoKey\SelecaoKey.Services\obj\Debug\netcoreapp3.1\SelecaoKey.Services.AssemblyInfoInputs.cache
-C:\selecaokey\SelecaoKey\SelecaoKey.Services\obj\Debug\netcoreapp3.1\SelecaoKey.Services.AssemblyInfo.cs
-C:\selecaokey\SelecaoKey\SelecaoKey.Services\obj\Debug\netcoreapp3.1\SelecaoKey.Services.csproj.CoreCompileInputs.cache
 C:\selecaokey\SelecaoKey\SelecaoKey.Services\bin\Debug\netcoreapp3.1\SelecaoKey.Services.deps.json
 C:\selecaokey\SelecaoKey\SelecaoKey.Services\bin\Debug\netcoreapp3.1\SelecaoKey.Services.dll
 C:\selecaokey\SelecaoKey\SelecaoKey.Services\bin\Debug\netcoreapp3.1\SelecaoKey.Services.pdb
@@ -14,6 +9,11 @@ C:\selecaokey\SelecaoKey\SelecaoKey.Services\bin\Debug\netcoreapp3.1\SelecaoKey.
 C:\selecaokey\SelecaoKey\SelecaoKey.Services\bin\Debug\netcoreapp3.1\SelecaoKey.Data.pdb
 C:\selecaokey\SelecaoKey\SelecaoKey.Services\bin\Debug\netcoreapp3.1\SelecaoKey.Views.pdb
 C:\selecaokey\SelecaoKey\SelecaoKey.Services\bin\Debug\netcoreapp3.1\Tools.pdb
+C:\selecaokey\SelecaoKey\SelecaoKey.Services\obj\Debug\netcoreapp3.1\SelecaoKey.Services.csproj.AssemblyReference.cache
+C:\selecaokey\SelecaoKey\SelecaoKey.Services\obj\Debug\netcoreapp3.1\SelecaoKey.Services.GeneratedMSBuildEditorConfig.editorconfig
+C:\selecaokey\SelecaoKey\SelecaoKey.Services\obj\Debug\netcoreapp3.1\SelecaoKey.Services.AssemblyInfoInputs.cache
+C:\selecaokey\SelecaoKey\SelecaoKey.Services\obj\Debug\netcoreapp3.1\SelecaoKey.Services.AssemblyInfo.cs
+C:\selecaokey\SelecaoKey\SelecaoKey.Services\obj\Debug\netcoreapp3.1\SelecaoKey.Services.csproj.CoreCompileInputs.cache
 C:\selecaokey\SelecaoKey\SelecaoKey.Services\obj\Debug\netcoreapp3.1\SelecaoKey.Services.csproj.CopyComplete
 C:\selecaokey\SelecaoKey\SelecaoKey.Services\obj\Debug\netcoreapp3.1\SelecaoKey.Services.dll
 C:\selecaokey\SelecaoKey\SelecaoKey.Services\obj\Debug\netcoreapp3.1\SelecaoKey.Services.pdb

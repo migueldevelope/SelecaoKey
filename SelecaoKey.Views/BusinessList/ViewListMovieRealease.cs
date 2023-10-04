@@ -6,7 +6,7 @@ namespace SelecaoKey.Views.BusinessList
 {
     public class ViewListMovieRealease
     {
-        public string Movie { get; set; }
+        public List<string> Movies { get; set; }
         public int Quantity { get; set; }
         public int Year { get; set; }
     }

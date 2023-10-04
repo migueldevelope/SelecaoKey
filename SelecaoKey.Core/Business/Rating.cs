@@ -12,7 +12,15 @@ namespace SelecaoKey.Core.Business
     public class Rating : BaseEntity
     {
         public int? IdUser { get; set; }
-       
+
+
+        [Key]
+        [ForeignKey("idMovie")]
+        public virtual Movie Movie { get; set; }
+
+
+        [Key]
+        [ForeignKey("idMovie")]
         public int? IdMovie { get; set; }
         public int Score { get; set; }
         
@@ -23,7 +31,7 @@ namespace SelecaoKey.Core.Business
             return new ViewListRating()
             {
                 Id = Id,
-                IdMovie = IdMovie,
+                IdMovie = Movie?.Id,
                 IdUser = IdUser,
                 Score = Score,
                 Comments = Comments

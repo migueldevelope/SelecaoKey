@@ -12,22 +12,22 @@ using SelecaoKey.Views.BusinessList;
 namespace SelecaoKey.Api.Controllers
 {
     /// <summary>
-    /// Controller Movie
+    /// Controller MovieStreaming
     /// </summary>
     [ApiController]
     [Produces("application/json")]
-    [Route("movie")]
-    public class MovieController : Controller
+    [Route("movieStreaming")]
+    public class MovieStreamingController : Controller
     {
-        private readonly IServiceMovie service;
+        private readonly IServiceMovieStreaming service;
 
         #region Constructor
         /// <summary>
         /// Construtor controller
         /// </summary>
-        /// <param name="_service">Service Movie</param>
+        /// <param name="_service">Service MovieStreaming</param>
         /// <param name="contextAccessor">Token infomartion</param>
-        public MovieController(IServiceMovie _service, IHttpContextAccessor contextAccessor)
+        public MovieStreamingController(IServiceMovieStreaming _service, IHttpContextAccessor contextAccessor)
         {
             try
             {
@@ -43,18 +43,17 @@ namespace SelecaoKey.Api.Controllers
         #region Crud
 
         /// <summary>
-        /// New Movie
+        /// New MovieStreaming
         /// </summary>
-        /// <param name="view">View Movie</param>
+        /// <param name="view">View MovieStreaming</param>
         /// <response code="200">Return message: 
-        /// Movie04 - New Movie success.</response>
+        /// MovieStreaming04 - New MovieStreaming success.</response>
         /// <response code="400">Return error code:<br />
-        /// Movie02 - Name invalid.<br />
         [Authorize]
         [HttpPost]
         [ProducesResponseType(typeof(string), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(string), StatusCodes.Status400BadRequest)]
-        public IActionResult New([FromBody] ViewCrudMovie view)
+        public IActionResult New([FromBody] ViewCrudMovieStreaming view)
         {
             try
             {
@@ -67,19 +66,18 @@ namespace SelecaoKey.Api.Controllers
         }
 
         /// <summary>
-        /// Update Movie
+        /// Update MovieStreaming
         /// </summary>
-        /// <param name="view">View Movie</param>
+        /// <param name="view">View MovieStreaming</param>
         /// <response code="200">Return message: 
-        /// Movie05 - Update Movie success.</response>
+        /// MovieStreaming05 - Update MovieStreaming success.</response>
         /// <response code="400">Return error code:<br />
-        /// Movie02 - Name invalid.<br />
-        /// Movie03 - Id not found.</response>
+        /// MovieStreaming03 - Id not found.</response>
         [Authorize]
         [HttpPut]
         [ProducesResponseType(typeof(string), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(string), StatusCodes.Status400BadRequest)]
-        public IActionResult Update([FromBody] ViewCrudMovie view)
+        public IActionResult Update([FromBody] ViewCrudMovieStreaming view)
         {
             try
             {
@@ -92,15 +90,15 @@ namespace SelecaoKey.Api.Controllers
         }
 
         /// <summary>
-        /// Get Movie to id
+        /// Get MovieStreaming to id
         /// </summary>
-        /// <param name="id">Identifier Movie</param>
+        /// <param name="id">Identifier MovieStreaming</param>
         /// <response code="200">Return information.</response>
         /// <response code="400">Return error code.</response>
         [Authorize]
         [HttpGet]
         [Route("{id}")]
-        [ProducesResponseType(typeof(ViewCrudMovie), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(ViewCrudMovieStreaming), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(string), StatusCodes.Status400BadRequest)]
         public IActionResult Get(int id)
         {
@@ -116,11 +114,11 @@ namespace SelecaoKey.Api.Controllers
 
 
         /// <summary>
-        /// Delete Movie to id
+        /// Delete MovieStreaming to id
         /// </summary>
-        /// <param name="id">Identifier Movie</param>
+        /// <param name="id">Identifier MovieStreaming</param>
         /// <response code="200">Return message:
-        /// Movie01 - Deleted Movie success.</response>
+        /// MovieStreaming01 - Deleted MovieStreaming success.</response>
         /// <response code="400">Return error code.</response>
         [Authorize]
         [HttpDelete]
@@ -140,9 +138,9 @@ namespace SelecaoKey.Api.Controllers
         }
 
         /// <summary>
-        /// List Movies
+        /// List MovieStreamings
         /// </summary>
-        /// <param name="filter">Filter name Movie (optional)</param>
+        /// <param name="filter">Filter name MovieStreaming (optional)</param>
         /// <param name="page">Page to list (optional - Default: 1)</param>
         /// <param name="pageSize">Page size to list (optional - Default: 10)</param>
         /// <response code="200">Return information.</response>
@@ -150,7 +148,7 @@ namespace SelecaoKey.Api.Controllers
         [Authorize]
         [HttpGet]
         [Route("list")]
-        [ProducesResponseType(typeof(List<ViewCrudMovie>), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(List<ViewCrudMovieStreaming>), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(string), StatusCodes.Status400BadRequest)]
         public IActionResult Get(int pageSize = 10, int page = 1, string filter = "")
         {
@@ -164,79 +162,6 @@ namespace SelecaoKey.Api.Controllers
             }
         }
 
-
-        // Questao 1
-        [Authorize]
-        [HttpGet]
-        [Route("quantitymoviestreamings")]
-        [ProducesResponseType(typeof(List<ViewListQuantityMovieStreamings>), StatusCodes.Status200OK)]
-        [ProducesResponseType(typeof(string), StatusCodes.Status400BadRequest)]
-        public IActionResult QuantityMovieStreamings()
-        {
-            try
-            {
-                return Ok(service.QuantityMovieStreamings());
-            }
-            catch (Exception e)
-            {
-                return BadRequest(e.Message);
-            }
-        }
-
-
-        // Questao 2
-        [Authorize]
-        [HttpGet]
-        [Route("averagemovieratings")]
-        [ProducesResponseType(typeof(List<ViewListAverageMovieRating>), StatusCodes.Status200OK)]
-        [ProducesResponseType(typeof(string), StatusCodes.Status400BadRequest)]
-        public IActionResult AverageMovieRatings()
-        {
-            try
-            {
-                return Ok(service.AverageMovieRatings());
-            }
-            catch (Exception e)
-            {
-                return BadRequest(e.Message);
-            }
-        }
-
-        // Questao 3
-        [Authorize]
-        [HttpGet]
-        [Route("movierealeases")]
-        [ProducesResponseType(typeof(List<ViewListMovieRealease>), StatusCodes.Status200OK)]
-        [ProducesResponseType(typeof(string), StatusCodes.Status400BadRequest)]
-        public IActionResult MovieRealeases()
-        {
-            try
-            {
-                return Ok(service.MovieRealeases());
-            }
-            catch (Exception e)
-            {
-                return BadRequest(e.Message);
-            }
-        }
-
-        // Questao 4
-        [Authorize]
-        [HttpGet]
-        [Route("listfiltercommentsscore")]
-        [ProducesResponseType(typeof(List<ViewListMovie>), StatusCodes.Status200OK)]
-        [ProducesResponseType(typeof(string), StatusCodes.Status400BadRequest)]
-        public IActionResult ListFilterCommentsScore(int pageSize = 999, int page = 1, string comments = "", int score = 0)
-        {
-            try
-            {
-                return Ok(service.ListFilterCommentsScore(pageSize, page, comments, score));
-            }
-            catch (Exception e)
-            {
-                return BadRequest(e.Message);
-            }
-        }
 
         #endregion
 

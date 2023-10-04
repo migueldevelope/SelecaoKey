@@ -8,7 +8,6 @@ namespace SelecaoKey.Views.BusinessList
     {
         public string Name { get; set; }
         public string Release { get; set; }
-
         public ICollection<ViewListRating> Ratings { get; set; }
     }
 }
