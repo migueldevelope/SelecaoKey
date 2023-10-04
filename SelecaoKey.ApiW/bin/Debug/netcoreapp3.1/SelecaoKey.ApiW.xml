@@ -88,6 +88,130 @@
             <response code="200">Return information.</response>
             <response code="400">Return error code.</response>
         </member>
+        <member name="T:SelecaoKey.Api.Controllers.RatingController">
+            <summary>
+            Controller Rating
+            </summary>
+        </member>
+        <member name="M:SelecaoKey.Api.Controllers.RatingController.#ctor(SelecaoKey.Core.Interfaces.IServiceRating,Microsoft.AspNetCore.Http.IHttpContextAccessor)">
+            <summary>
+            Construtor controller
+            </summary>
+            <param name="_service">Service Rating</param>
+            <param name="contextAccessor">Token infomartion</param>
+        </member>
+        <member name="M:SelecaoKey.Api.Controllers.RatingController.New(SelecaoKey.Views.BusinessCrud.ViewCrudRating)">
+            <summary>
+            New Rating
+            </summary>
+            <param name="view">View Rating</param>
+            <response code="200">Return message: 
+            Rating04 - New Rating success.</response>
+            <response code="400">Return error code:<br />
+            Rating02 - Name invalid.<br />
+            Rating03 - Company invalid.</response>
+        </member>
+        <member name="M:SelecaoKey.Api.Controllers.RatingController.Update(SelecaoKey.Views.BusinessCrud.ViewCrudRating)">
+            <summary>
+            Update Rating
+            </summary>
+            <param name="view">View Rating</param>
+            <response code="200">Return message: 
+            Rating06 - Update Rating success.</response>
+            <response code="400">Return error code:<br />
+            Rating02 - Name invalid.<br />
+            Rating03 - Company invalid. <br />
+            Rating05 - Id not found.</response>
+        </member>
+        <member name="M:SelecaoKey.Api.Controllers.RatingController.Get(System.Int32)">
+            <summary>
+            Get Rating to id
+            </summary>
+            <param name="id">Identifier Rating</param>
+            <response code="200">Return information.</response>
+            <response code="400">Return error code.</response>
+        </member>
+        <member name="M:SelecaoKey.Api.Controllers.RatingController.Delete(System.Int32)">
+            <summary>
+            Delete Rating to id
+            </summary>
+            <param name="id">Identifier Rating</param>
+            <response code="200">Return message:
+            Rating01 - Deleted Rating success.</response>
+            <response code="400">Return error code.</response>
+        </member>
+        <member name="M:SelecaoKey.Api.Controllers.RatingController.Get(System.Int32,System.Int32,System.String)">
+            <summary>
+            List Ratings
+            </summary>
+            <param name="filter">Filter name Rating (optional)</param>
+            <param name="page">Page to list (optional - Default: 1)</param>
+            <param name="pageSize">Page size to list (optional - Default: 10)</param>
+            <response code="200">Return information.</response>
+            <response code="400">Return error code.</response>
+        </member>
+        <member name="T:SelecaoKey.Api.Controllers.StreamingController">
+            <summary>
+            Controller Streaming
+            </summary>
+        </member>
+        <member name="M:SelecaoKey.Api.Controllers.StreamingController.#ctor(SelecaoKey.Core.Interfaces.IServiceStreaming,Microsoft.AspNetCore.Http.IHttpContextAccessor)">
+            <summary>
+            Construtor controller
+            </summary>
+            <param name="_service">Service Streaming</param>
+            <param name="contextAccessor">Token infomartion</param>
+        </member>
+        <member name="M:SelecaoKey.Api.Controllers.StreamingController.New(SelecaoKey.Views.BusinessCrud.ViewCrudStreaming)">
+            <summary>
+            New Streaming
+            </summary>
+            <param name="view">View Streaming</param>
+            <response code="200">Return message: 
+            Streaming04 - New Streaming success.</response>
+            <response code="400">Return error code:<br />
+            Streaming02 - Name invalid.<br />
+            Streaming03 - Company invalid.</response>
+        </member>
+        <member name="M:SelecaoKey.Api.Controllers.StreamingController.Update(SelecaoKey.Views.BusinessCrud.ViewCrudStreaming)">
+            <summary>
+            Update Streaming
+            </summary>
+            <param name="view">View Streaming</param>
+            <response code="200">Return message: 
+            Streaming06 - Update Streaming success.</response>
+            <response code="400">Return error code:<br />
+            Streaming02 - Name invalid.<br />
+            Streaming03 - Company invalid. <br />
+            Streaming05 - Id not found.</response>
+        </member>
+        <member name="M:SelecaoKey.Api.Controllers.StreamingController.Get(System.Int32)">
+            <summary>
+            Get Streaming to id
+            </summary>
+            <param name="id">Identifier Streaming</param>
+            <response code="200">Return information.</response>
+            <response code="400">Return error code.</response>
+        </member>
+        <member name="M:SelecaoKey.Api.Controllers.StreamingController.Delete(System.Int32)">
+            <summary>
+            Delete Streaming to id
+            </summary>
+            <param name="id">Identifier Streaming</param>
+            <response code="200">Return message:
+            Streaming01 - Deleted Streaming success.</response>
+            <response code="400">Return error code.</response>
+        </member>
+        <member name="M:SelecaoKey.Api.Controllers.StreamingController.Get(System.Int32,System.Int32,System.String)">
+            <summary>
+            List Streamings
+            </summary>
+            <param name="filter">Filter name Streaming (optional)</param>
+            <param name="page">Page to list (optional - Default: 1)</param>
+            <param name="pageSize">Page size to list (optional - Default: 10)</param>
+            <response code="200">Return information.</response>
+            <response code="400">Return error code.</response>
+        </member>
         <member name="T:SelecaoKey.Api.Controllers.UserController">
             <summary>
             Controller user

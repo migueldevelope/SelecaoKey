@@ -54,7 +54,8 @@ namespace SelecaoKey.Data
 
         public virtual TEntity GetByID(object id)
         {
-            return dbSet.Find(id);
+            TEntity obj = dbSet.Find(id);
+            return obj;
         }
 
         public virtual void Insert(TEntity entity)

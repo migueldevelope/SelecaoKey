@@ -1,6 +1,7 @@
 ﻿using SelecaoKey.Core.Base;
 using SelecaoKey.Views.BusinessCrud;
 using SelecaoKey.Views.BusinessList;
+using SelecaoKey.Views.Enumns;
 using System;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -11,7 +12,7 @@ namespace SelecaoKey.Core.Business
     {
         public string Name { get; set; }
         public int IdStreaming { get; set; }
-        public int Genre { get; set; }
+        public EnumGenre Genre { get; set; }
         public DateTime? Release { get; set; }
 
         public ViewListMovie GetViewList()
@@ -19,7 +20,8 @@ namespace SelecaoKey.Core.Business
             return new ViewListMovie()
             {
                 Id = Id,
-                Name = Name
+                Name = Name,
+                Release = Release == null ? "" : Release.Value.ToString("MM/yyyy"),
             };
         }
 
@@ -29,7 +31,7 @@ namespace SelecaoKey.Core.Business
             {
                 Id = Id,
                 Name = Name,
-                Release = Release == null ? "" : Release.Value.ToString("MM/yyyy"),
+                Release = Release,
                 Genre = Genre,
                 IdStreaming = IdStreaming
             };

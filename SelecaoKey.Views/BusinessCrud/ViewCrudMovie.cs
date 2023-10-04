@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SelecaoKey.Views.Enumns;
+using System;
 
 namespace SelecaoKey.Views.BusinessCrud
 {
@@ -6,7 +7,7 @@ namespace SelecaoKey.Views.BusinessCrud
     {
         public string Name { get; set; }
         public int IdStreaming { get; set; }
-        public int Genre { get; set; }
+        public EnumGenre Genre { get; set; }
         public DateTime? Release { get; set; }
     }
 }

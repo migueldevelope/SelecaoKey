@@ -86,7 +86,7 @@ namespace SelecaoKey.Api
             _ = services.AddCors(options =>
             {
                 options.AddPolicy("CorsPolicy",
-                          builder => builder.WithOrigins("http://localhosts/*", "10.0.0.16", "https://fluidstate.com.br/*", "https://dev.fluidstate.com.br/*", "https://hml.fluidstate.com.br/*")
+                          builder => builder.WithOrigins("http://localhosts/*")
                           .AllowAnyMethod()
                           .AllowAnyHeader()
                           //.WithExposedHeaders("x-total-count")
@@ -102,7 +102,7 @@ namespace SelecaoKey.Api
                     {
                         Title = "SelecaoKey",
                         Version = "v1",
-                        Description = "Sistema de Movies"
+                        Description = "Sistema de Streaming"
                     });
                 string caminhoAplicacao = PlatformServices.Default.Application.ApplicationBasePath;
                 string nomeAplicacao = PlatformServices.Default.Application.ApplicationName;

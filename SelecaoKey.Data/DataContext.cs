@@ -25,7 +25,10 @@ namespace SelecaoKey.Data
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
-            builder.Entity<Users>(entity => entity.ToTable("Users"));
+            builder.Entity<Users>(entity => entity.ToTable("Users").HasKey(p => p.Id));
+            builder.Entity<Streaming>(entity => entity.ToTable("Streaming").HasKey(p => p.Id));
+            builder.Entity<Movie>(entity => entity.ToTable("Movie").HasKey(p => p.Id));
+            builder.Entity<Rating>(entity => entity.ToTable("Rating").HasKey(p => p.Id));
 
             base.OnModelCreating(builder);
         }

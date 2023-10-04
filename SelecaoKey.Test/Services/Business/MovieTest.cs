@@ -9,9 +9,12 @@ using Xunit;
 using SelecaoKey.Views.BusinessList;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SelecaoKey.Test.Commons;
+using SelecaoKey.Services.Business;
+using SelecaoKey.Views.Enumns;
 
 namespace SelecaoKey.Test.Services.Auth
 {
+    [TestClass]
     public class MovieTest : TestCommons
     {
         private readonly ServiceMovie service;
@@ -21,12 +24,13 @@ namespace SelecaoKey.Test.Services.Auth
         }
 
         [Fact]
+        [TestMethod]
         public void CrudMovie()
         {
             try
             {
                 ViewCrudMovie view = new ViewCrudMovie();
-                view.Genre = 1;
+                view.Genre = EnumGenre.Adventure;
                 view.Release = DateTime.Now;
 
                 // name invalid 
@@ -38,7 +42,8 @@ namespace SelecaoKey.Test.Services.Auth
                 ex = Assert.ThrowsException<Exception>(() => service.New(view));
                 Assert.Equals("Movie03", ex.Message);
 
-                view.Genre = 2;
+
+                view.Genre = EnumGenre.Adventure;
                 // new hq
                 Assert.Equals("Movie04", service.New(view));
 
@@ -52,13 +57,14 @@ namespace SelecaoKey.Test.Services.Auth
                 ex = Assert.ThrowsException<Exception>(() => service.Update(view));
                 Assert.Equals("Movie03", ex.Message);
 
-                view.Genre = 1;
+                view.Genre = EnumGenre.Adventure;
                 // id invalid
                 ex = Assert.ThrowsException<Exception>(() => service.Update(view));
                 Assert.Equals("Movie05", ex.Message);
 
                 view.Release = DateTime.Now;
-                view.Genre = 1;
+
+                view.Genre = EnumGenre.Adventure;
                 view.Id = service.List(999, 1, "").LastOrDefault().Id;
                 // update hq
                 Assert.Equals("Movie06", service.Update(view));

@@ -71,7 +71,11 @@ namespace SelecaoKey.Services.Business
                 }
                 service.Insert(new Movie()
                 {
-                    Name = view.Name
+                    Name = view.Name,
+                    Genre = view.Genre,
+                    IdStreaming = view.IdStreaming,
+                    Release = view.Release
+
                 });
                 return "Movie04";
             }
