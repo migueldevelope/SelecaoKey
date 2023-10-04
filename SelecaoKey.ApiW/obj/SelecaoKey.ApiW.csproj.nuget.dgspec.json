@@ -1,0 +1,469 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\selecaokey\\SelecaoKey\\SelecaoKey.ApiW\\SelecaoKey.ApiW.csproj": {}
+  },
+  "projects": {
+    "C:\\selecaokey\\SelecaoKey\\SelecaoKey.ApiW\\SelecaoKey.ApiW.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\selecaokey\\SelecaoKey\\SelecaoKey.ApiW\\SelecaoKey.ApiW.csproj",
+        "projectName": "SelecaoKey.ApiW",
+        "projectPath": "C:\\selecaokey\\SelecaoKey\\SelecaoKey.ApiW\\SelecaoKey.ApiW.csproj",
+        "packagesPath": "C:\\Users\\018852631\\.nuget\\packages\\",
+        "outputPath": "C:\\selecaokey\\SelecaoKey\\SelecaoKey.ApiW\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\018852631\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://nexusproxy-azure.petrobras.dev.br/nexus/repository/nuget-group-2/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "C:\\selecaokey\\SelecaoKey\\SelecaoKey.Core\\SelecaoKey.Core.csproj": {
+                "projectPath": "C:\\selecaokey\\SelecaoKey\\SelecaoKey.Core\\SelecaoKey.Core.csproj"
+              },
+              "C:\\selecaokey\\SelecaoKey\\SelecaoKey.Data\\SelecaoKey.Data.csproj": {
+                "projectPath": "C:\\selecaokey\\SelecaoKey\\SelecaoKey.Data\\SelecaoKey.Data.csproj"
+              },
+              "C:\\selecaokey\\SelecaoKey\\SelecaoKey.Services\\SelecaoKey.Services.csproj": {
+                "projectPath": "C:\\selecaokey\\SelecaoKey\\SelecaoKey.Services\\SelecaoKey.Services.csproj"
+              },
+              "C:\\selecaokey\\SelecaoKey\\SelecaoKey.Views\\SelecaoKey.Views.csproj": {
+                "projectPath": "C:\\selecaokey\\SelecaoKey\\SelecaoKey.Views\\SelecaoKey.Views.csproj"
+              },
+              "C:\\selecaokey\\SelecaoKey\\Tools\\Tools.csproj": {
+                "projectPath": "C:\\selecaokey\\SelecaoKey\\Tools\\Tools.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.0, )"
+            },
+            "Microsoft.Extensions.PlatformAbstractions": {
+              "target": "Package",
+              "version": "[1.1.0, )"
+            },
+            "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
+              "target": "Package",
+              "version": "[1.17.0, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.5.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[3.1.30, 3.1.30]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\selecaokey\\SelecaoKey\\SelecaoKey.Core\\SelecaoKey.Core.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\selecaokey\\SelecaoKey\\SelecaoKey.Core\\SelecaoKey.Core.csproj",
+        "projectName": "SelecaoKey.Core",
+        "projectPath": "C:\\selecaokey\\SelecaoKey\\SelecaoKey.Core\\SelecaoKey.Core.csproj",
+        "packagesPath": "C:\\Users\\018852631\\.nuget\\packages\\",
+        "outputPath": "C:\\selecaokey\\SelecaoKey\\SelecaoKey.Core\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\018852631\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://nexusproxy-azure.petrobras.dev.br/nexus/repository/nuget-group-2/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "C:\\selecaokey\\SelecaoKey\\SelecaoKey.Views\\SelecaoKey.Views.csproj": {
+                "projectPath": "C:\\selecaokey\\SelecaoKey\\SelecaoKey.Views\\SelecaoKey.Views.csproj"
+              },
+              "C:\\selecaokey\\SelecaoKey\\Tools\\Tools.csproj": {
+                "projectPath": "C:\\selecaokey\\SelecaoKey\\Tools\\Tools.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.1.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\selecaokey\\SelecaoKey\\SelecaoKey.Data\\SelecaoKey.Data.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\selecaokey\\SelecaoKey\\SelecaoKey.Data\\SelecaoKey.Data.csproj",
+        "projectName": "SelecaoKey.Data",
+        "projectPath": "C:\\selecaokey\\SelecaoKey\\SelecaoKey.Data\\SelecaoKey.Data.csproj",
+        "packagesPath": "C:\\Users\\018852631\\.nuget\\packages\\",
+        "outputPath": "C:\\selecaokey\\SelecaoKey\\SelecaoKey.Data\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\018852631\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://nexusproxy-azure.petrobras.dev.br/nexus/repository/nuget-group-2/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "C:\\selecaokey\\SelecaoKey\\SelecaoKey.Core\\SelecaoKey.Core.csproj": {
+                "projectPath": "C:\\selecaokey\\SelecaoKey\\SelecaoKey.Core\\SelecaoKey.Core.csproj"
+              },
+              "C:\\selecaokey\\SelecaoKey\\SelecaoKey.Views\\SelecaoKey.Views.csproj": {
+                "projectPath": "C:\\selecaokey\\SelecaoKey\\SelecaoKey.Views\\SelecaoKey.Views.csproj"
+              },
+              "C:\\selecaokey\\SelecaoKey\\Tools\\Tools.csproj": {
+                "projectPath": "C:\\selecaokey\\SelecaoKey\\Tools\\Tools.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[3.1.14, )"
+            },
+            "Microsoft.DotNet.PlatformAbstractions": {
+              "target": "Package",
+              "version": "[3.1.6, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[3.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\selecaokey\\SelecaoKey\\SelecaoKey.Services\\SelecaoKey.Services.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\selecaokey\\SelecaoKey\\SelecaoKey.Services\\SelecaoKey.Services.csproj",
+        "projectName": "SelecaoKey.Services",
+        "projectPath": "C:\\selecaokey\\SelecaoKey\\SelecaoKey.Services\\SelecaoKey.Services.csproj",
+        "packagesPath": "C:\\Users\\018852631\\.nuget\\packages\\",
+        "outputPath": "C:\\selecaokey\\SelecaoKey\\SelecaoKey.Services\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\018852631\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://nexusproxy-azure.petrobras.dev.br/nexus/repository/nuget-group-2/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "C:\\selecaokey\\SelecaoKey\\SelecaoKey.Core\\SelecaoKey.Core.csproj": {
+                "projectPath": "C:\\selecaokey\\SelecaoKey\\SelecaoKey.Core\\SelecaoKey.Core.csproj"
+              },
+              "C:\\selecaokey\\SelecaoKey\\SelecaoKey.Data\\SelecaoKey.Data.csproj": {
+                "projectPath": "C:\\selecaokey\\SelecaoKey\\SelecaoKey.Data\\SelecaoKey.Data.csproj"
+              },
+              "C:\\selecaokey\\SelecaoKey\\SelecaoKey.Views\\SelecaoKey.Views.csproj": {
+                "projectPath": "C:\\selecaokey\\SelecaoKey\\SelecaoKey.Views\\SelecaoKey.Views.csproj"
+              },
+              "C:\\selecaokey\\SelecaoKey\\Tools\\Tools.csproj": {
+                "projectPath": "C:\\selecaokey\\SelecaoKey\\Tools\\Tools.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.0, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[7.0.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\selecaokey\\SelecaoKey\\SelecaoKey.Views\\SelecaoKey.Views.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\selecaokey\\SelecaoKey\\SelecaoKey.Views\\SelecaoKey.Views.csproj",
+        "projectName": "SelecaoKey.Views",
+        "projectPath": "C:\\selecaokey\\SelecaoKey\\SelecaoKey.Views\\SelecaoKey.Views.csproj",
+        "packagesPath": "C:\\Users\\018852631\\.nuget\\packages\\",
+        "outputPath": "C:\\selecaokey\\SelecaoKey\\SelecaoKey.Views\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\018852631\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://nexusproxy-azure.petrobras.dev.br/nexus/repository/nuget-group-2/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\selecaokey\\SelecaoKey\\Tools\\Tools.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\selecaokey\\SelecaoKey\\Tools\\Tools.csproj",
+        "projectName": "Tools",
+        "projectPath": "C:\\selecaokey\\SelecaoKey\\Tools\\Tools.csproj",
+        "packagesPath": "C:\\Users\\018852631\\.nuget\\packages\\",
+        "outputPath": "C:\\selecaokey\\SelecaoKey\\Tools\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\018852631\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://nexusproxy-azure.petrobras.dev.br/nexus/repository/nuget-group-2/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

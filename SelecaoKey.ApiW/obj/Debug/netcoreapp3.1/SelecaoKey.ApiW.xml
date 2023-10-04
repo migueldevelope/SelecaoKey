@@ -1,0 +1,208 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SelecaoKey.ApiW</name>
+    </assembly>
+    <members>
+        <member name="T:SelecaoKey.Api.Controllers.AuthController">
+            <summary>
+            Controller authentication
+            </summary>
+        </member>
+        <member name="M:SelecaoKey.Api.Controllers.AuthController.#ctor(SelecaoKey.Core.Interfaces.IServiceAuthentication,Microsoft.AspNetCore.Http.IHttpContextAccessor)">
+            <summary>
+            Construtor controller
+            </summary>
+            <param name="_service">Service authentication</param>
+            <param name="contextAccessor">Token infomartion</param>
+        </member>
+        <member name="M:SelecaoKey.Api.Controllers.AuthController.Auth(SelecaoKey.Views.BusinessCrud.ViewAuthentication)">
+            <summary>
+            Authentication User
+            </summary>
+            <param name="view">View authentication</param>
+            <response code="200">Return authentication</response>
+            <response code="400">Return error code:<br />
+            AUTHENTICATION01 - Mail invalid.<br />
+            AUTHENTICATION02 - Password invalid.</response>
+        </member>
+        <member name="T:SelecaoKey.Api.Controllers.MovieController">
+            <summary>
+            Controller Movie
+            </summary>
+        </member>
+        <member name="M:SelecaoKey.Api.Controllers.MovieController.#ctor(SelecaoKey.Core.Interfaces.IServiceMovie,Microsoft.AspNetCore.Http.IHttpContextAccessor)">
+            <summary>
+            Construtor controller
+            </summary>
+            <param name="_service">Service Movie</param>
+            <param name="contextAccessor">Token infomartion</param>
+        </member>
+        <member name="M:SelecaoKey.Api.Controllers.MovieController.New(SelecaoKey.Views.BusinessCrud.ViewCrudMovie)">
+            <summary>
+            New Movie
+            </summary>
+            <param name="view">View Movie</param>
+            <response code="200">Return message: 
+            Movie04 - New Movie success.</response>
+            <response code="400">Return error code:<br />
+            Movie02 - Name invalid.<br />
+            Movie03 - Company invalid.</response>
+        </member>
+        <member name="M:SelecaoKey.Api.Controllers.MovieController.Update(SelecaoKey.Views.BusinessCrud.ViewCrudMovie)">
+            <summary>
+            Update Movie
+            </summary>
+            <param name="view">View Movie</param>
+            <response code="200">Return message: 
+            Movie06 - Update Movie success.</response>
+            <response code="400">Return error code:<br />
+            Movie02 - Name invalid.<br />
+            Movie03 - Company invalid. <br />
+            Movie05 - Id not found.</response>
+        </member>
+        <member name="M:SelecaoKey.Api.Controllers.MovieController.Get(System.Int32)">
+            <summary>
+            Get Movie to id
+            </summary>
+            <param name="id">Identifier Movie</param>
+            <response code="200">Return information.</response>
+            <response code="400">Return error code.</response>
+        </member>
+        <member name="M:SelecaoKey.Api.Controllers.MovieController.Delete(System.Int32)">
+            <summary>
+            Delete Movie to id
+            </summary>
+            <param name="id">Identifier Movie</param>
+            <response code="200">Return message:
+            Movie01 - Deleted Movie success.</response>
+            <response code="400">Return error code.</response>
+        </member>
+        <member name="M:SelecaoKey.Api.Controllers.MovieController.Get(System.Int32,System.Int32,System.String)">
+            <summary>
+            List Movies
+            </summary>
+            <param name="filter">Filter name Movie (optional)</param>
+            <param name="page">Page to list (optional - Default: 1)</param>
+            <param name="pageSize">Page size to list (optional - Default: 10)</param>
+            <response code="200">Return information.</response>
+            <response code="400">Return error code.</response>
+        </member>
+        <member name="T:SelecaoKey.Api.Controllers.UserController">
+            <summary>
+            Controller user
+            </summary>
+        </member>
+        <member name="M:SelecaoKey.Api.Controllers.UserController.#ctor(SelecaoKey.Core.Interfaces.IServiceUser,Microsoft.AspNetCore.Http.IHttpContextAccessor)">
+            <summary>
+            Construtor controller
+            </summary>
+            <param name="_service">Service user</param>
+            <param name="contextAccessor">Token infomartion</param>
+        </member>
+        <member name="M:SelecaoKey.Api.Controllers.UserController.New(SelecaoKey.Views.BusinessCrud.ViewCrudUser)">
+            <summary>
+            New User
+            </summary>
+            <param name="view">View user</param>
+            <response code="200">Return message: 
+            USER05 - New user success.</response>
+            <response code="400">Return error code:<br />
+            USER02 - Name invalid.<br />
+            USER03 - Mail invalid.<br />
+            USER04 - Password invalid.</response>
+        </member>
+        <member name="M:SelecaoKey.Api.Controllers.UserController.Update(SelecaoKey.Views.BusinessCrud.ViewCrudUser)">
+            <summary>
+            Update User
+            </summary>
+            <param name="view">View user</param>
+            <response code="200">Return message: 
+            USER07 - Update user success.</response>
+            <response code="400">Return error code:<br />
+            USER02 - Name invalid.<br />
+            USER03 - Mail invalid.<br />
+            USER04 - Password invalid.<br />
+            USER06 - Id not found.</response>
+        </member>
+        <member name="M:SelecaoKey.Api.Controllers.UserController.Get(System.Int32)">
+            <summary>
+            Get User to id
+            </summary>
+            <param name="id">Identifier user</param>
+            <response code="200">Return information.</response>
+            <response code="400">Return error code.</response>
+        </member>
+        <member name="M:SelecaoKey.Api.Controllers.UserController.Delete(System.Int32)">
+            <summary>
+            Delete User to id
+            </summary>
+            <param name="id">Identifier user</param>
+            <response code="200">Return message:
+            USER01 - Deleted user success.</response>
+            <response code="400">Return error code.</response>
+        </member>
+        <member name="M:SelecaoKey.Api.Controllers.UserController.Get(System.Int32,System.Int32,System.String)">
+            <summary>
+            List Users
+            </summary>
+            <param name="filter">Filter name user (optional)</param>
+            <param name="page">Page to list (optional - Default: 1)</param>
+            <param name="pageSize">Page size to list (optional - Default: 10)</param>
+            <response code="200">Return information.</response>
+            <response code="400">Return error code.</response>
+        </member>
+        <member name="T:SelecaoKey.Api.Program">
+            <summary>
+            Configurador do programa
+            </summary>
+        </member>
+        <member name="M:SelecaoKey.Api.Program.Main(System.String[])">
+            <summary>
+            Ponto de entrada
+            </summary>
+            <param name="args">Argumentos da linha de comando</param>
+        </member>
+        <member name="M:SelecaoKey.Api.Program.BuildWebHost(System.String[])">
+            <summary>
+            Configurador do servidor Web
+            </summary>
+            <param name="args">Argumentos da linha de comando</param>
+            <returns></returns>
+        </member>
+        <member name="T:SelecaoKey.Api.Startup">
+            <summary>
+            Controle de inicialização da API
+            </summary>
+        </member>
+        <member name="M:SelecaoKey.Api.Startup.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Construtor do controle
+            </summary>
+            <param name="configuration"></param>
+        </member>
+        <member name="P:SelecaoKey.Api.Startup.Configuration">
+            <summary>
+            Propriedade de configuração
+            </summary>
+        </member>
+        <member name="M:SelecaoKey.Api.Startup.RegistreServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Registrador de serviços
+            </summary>
+            <param name="services">Coleção de serviços</param>
+        </member>
+        <member name="M:SelecaoKey.Api.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Configurador de servicos
+            </summary>
+            <param name="services">Coleção de serviços</param>
+        </member>
+        <member name="M:SelecaoKey.Api.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder)">
+            <summary>
+            Configuração de aplicação
+            </summary>
+            <param name="app">Aplicação</param>
+        </member>
+    </members>
+</doc>

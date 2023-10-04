@@ -1,0 +1,17 @@
+C:\selecaokey\SelecaoKey\SelecaoKey.Data\obj\Debug\netcoreapp3.1\SelecaoKey.Data.csproj.AssemblyReference.cache
+C:\selecaokey\SelecaoKey\SelecaoKey.Data\obj\Debug\netcoreapp3.1\SelecaoKey.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\selecaokey\SelecaoKey\SelecaoKey.Data\obj\Debug\netcoreapp3.1\SelecaoKey.Data.AssemblyInfoInputs.cache
+C:\selecaokey\SelecaoKey\SelecaoKey.Data\obj\Debug\netcoreapp3.1\SelecaoKey.Data.AssemblyInfo.cs
+C:\selecaokey\SelecaoKey\SelecaoKey.Data\obj\Debug\netcoreapp3.1\SelecaoKey.Data.csproj.CoreCompileInputs.cache
+C:\selecaokey\SelecaoKey\SelecaoKey.Data\bin\Debug\netcoreapp3.1\SelecaoKey.Data.deps.json
+C:\selecaokey\SelecaoKey\SelecaoKey.Data\bin\Debug\netcoreapp3.1\SelecaoKey.Data.dll
+C:\selecaokey\SelecaoKey\SelecaoKey.Data\bin\Debug\netcoreapp3.1\SelecaoKey.Data.pdb
+C:\selecaokey\SelecaoKey\SelecaoKey.Data\bin\Debug\netcoreapp3.1\SelecaoKey.Core.dll
+C:\selecaokey\SelecaoKey\SelecaoKey.Data\bin\Debug\netcoreapp3.1\SelecaoKey.Views.dll
+C:\selecaokey\SelecaoKey\SelecaoKey.Data\bin\Debug\netcoreapp3.1\Tools.dll
+C:\selecaokey\SelecaoKey\SelecaoKey.Data\bin\Debug\netcoreapp3.1\SelecaoKey.Core.pdb
+C:\selecaokey\SelecaoKey\SelecaoKey.Data\bin\Debug\netcoreapp3.1\SelecaoKey.Views.pdb
+C:\selecaokey\SelecaoKey\SelecaoKey.Data\bin\Debug\netcoreapp3.1\Tools.pdb
+C:\selecaokey\SelecaoKey\SelecaoKey.Data\obj\Debug\netcoreapp3.1\SelecaoKey.Data.csproj.CopyComplete
+C:\selecaokey\SelecaoKey\SelecaoKey.Data\obj\Debug\netcoreapp3.1\SelecaoKey.Data.dll
+C:\selecaokey\SelecaoKey\SelecaoKey.Data\obj\Debug\netcoreapp3.1\SelecaoKey.Data.pdb

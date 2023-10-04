@@ -1,0 +1,10 @@
+C:\selecaokey\SelecaoKey\SelecaoKey.Views\bin\Debug\netcoreapp3.1\SelecaoKey.Views.deps.json
+C:\selecaokey\SelecaoKey\SelecaoKey.Views\bin\Debug\netcoreapp3.1\SelecaoKey.Views.dll
+C:\selecaokey\SelecaoKey\SelecaoKey.Views\bin\Debug\netcoreapp3.1\SelecaoKey.Views.pdb
+C:\selecaokey\SelecaoKey\SelecaoKey.Views\obj\Debug\netcoreapp3.1\SelecaoKey.Views.csproj.AssemblyReference.cache
+C:\selecaokey\SelecaoKey\SelecaoKey.Views\obj\Debug\netcoreapp3.1\SelecaoKey.Views.GeneratedMSBuildEditorConfig.editorconfig
+C:\selecaokey\SelecaoKey\SelecaoKey.Views\obj\Debug\netcoreapp3.1\SelecaoKey.Views.AssemblyInfoInputs.cache
+C:\selecaokey\SelecaoKey\SelecaoKey.Views\obj\Debug\netcoreapp3.1\SelecaoKey.Views.AssemblyInfo.cs
+C:\selecaokey\SelecaoKey\SelecaoKey.Views\obj\Debug\netcoreapp3.1\SelecaoKey.Views.csproj.CoreCompileInputs.cache
+C:\selecaokey\SelecaoKey\SelecaoKey.Views\obj\Debug\netcoreapp3.1\SelecaoKey.Views.dll
+C:\selecaokey\SelecaoKey\SelecaoKey.Views\obj\Debug\netcoreapp3.1\SelecaoKey.Views.pdb

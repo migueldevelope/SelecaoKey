@@ -1,0 +1,10 @@
+C:\selecaokey\SelecaoKey\Tools\bin\Debug\netcoreapp3.1\Tools.deps.json
+C:\selecaokey\SelecaoKey\Tools\bin\Debug\netcoreapp3.1\Tools.dll
+C:\selecaokey\SelecaoKey\Tools\bin\Debug\netcoreapp3.1\Tools.pdb
+C:\selecaokey\SelecaoKey\Tools\obj\Debug\netcoreapp3.1\Tools.csproj.AssemblyReference.cache
+C:\selecaokey\SelecaoKey\Tools\obj\Debug\netcoreapp3.1\Tools.GeneratedMSBuildEditorConfig.editorconfig
+C:\selecaokey\SelecaoKey\Tools\obj\Debug\netcoreapp3.1\Tools.AssemblyInfoInputs.cache
+C:\selecaokey\SelecaoKey\Tools\obj\Debug\netcoreapp3.1\Tools.AssemblyInfo.cs
+C:\selecaokey\SelecaoKey\Tools\obj\Debug\netcoreapp3.1\Tools.csproj.CoreCompileInputs.cache
+C:\selecaokey\SelecaoKey\Tools\obj\Debug\netcoreapp3.1\Tools.dll
+C:\selecaokey\SelecaoKey\Tools\obj\Debug\netcoreapp3.1\Tools.pdb
