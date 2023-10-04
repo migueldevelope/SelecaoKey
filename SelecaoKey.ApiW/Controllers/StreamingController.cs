@@ -50,7 +50,6 @@ namespace SelecaoKey.Api.Controllers
         /// Streaming04 - New Streaming success.</response>
         /// <response code="400">Return error code:<br />
         /// Streaming02 - Name invalid.<br />
-        /// Streaming03 - Company invalid.</response>
         [Authorize]
         [HttpPost]
         [ProducesResponseType(typeof(string), StatusCodes.Status200OK)]
@@ -72,11 +71,10 @@ namespace SelecaoKey.Api.Controllers
         /// </summary>
         /// <param name="view">View Streaming</param>
         /// <response code="200">Return message: 
-        /// Streaming06 - Update Streaming success.</response>
+        /// Streaming05 - Update Streaming success.</response>
         /// <response code="400">Return error code:<br />
         /// Streaming02 - Name invalid.<br />
-        /// Streaming03 - Company invalid. <br />
-        /// Streaming05 - Id not found.</response>
+        /// Streaming03 - Id not found.</response>
         [Authorize]
         [HttpPut]
         [ProducesResponseType(typeof(string), StatusCodes.Status200OK)]

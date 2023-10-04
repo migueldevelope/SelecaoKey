@@ -92,10 +92,10 @@ namespace SelecaoKey.Services.Business
                 Streaming model = service.GetByID(view.Id);
                 if (model == null)
                 {
-                    throw new Exception("Streaming05");
+                    throw new Exception("Streaming03");
                 }
                 service.Update(model);
-                return "Streaming06";
+                return "Streaming05";
             }
             catch (Exception e)
             {

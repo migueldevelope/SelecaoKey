@@ -38,28 +38,17 @@
             <param name="_service">Service Movie</param>
             <param name="contextAccessor">Token infomartion</param>
         </member>
-        <member name="M:SelecaoKey.Api.Controllers.MovieController.New(SelecaoKey.Views.BusinessCrud.ViewCrudMovie)">
-            <summary>
-            New Movie
-            </summary>
-            <param name="view">View Movie</param>
-            <response code="200">Return message: 
-            Movie04 - New Movie success.</response>
-            <response code="400">Return error code:<br />
-            Movie02 - Name invalid.<br />
-            Movie03 - Company invalid.</response>
-        </member>
+        <!-- Badly formed XML comment ignored for member "M:SelecaoKey.Api.Controllers.MovieController.New(SelecaoKey.Views.BusinessCrud.ViewCrudMovie)" -->
         <member name="M:SelecaoKey.Api.Controllers.MovieController.Update(SelecaoKey.Views.BusinessCrud.ViewCrudMovie)">
             <summary>
             Update Movie
             </summary>
             <param name="view">View Movie</param>
             <response code="200">Return message: 
-            Movie06 - Update Movie success.</response>
+            Movie05 - Update Movie success.</response>
             <response code="400">Return error code:<br />
             Movie02 - Name invalid.<br />
-            Movie03 - Company invalid. <br />
-            Movie05 - Id not found.</response>
+            Movie03 - Id not found.</response>
         </member>
         <member name="M:SelecaoKey.Api.Controllers.MovieController.Get(System.Int32)">
             <summary>
@@ -100,28 +89,19 @@
             <param name="_service">Service Rating</param>
             <param name="contextAccessor">Token infomartion</param>
         </member>
-        <member name="M:SelecaoKey.Api.Controllers.RatingController.New(SelecaoKey.Views.BusinessCrud.ViewCrudRating)">
-            <summary>
-            New Rating
-            </summary>
-            <param name="view">View Rating</param>
-            <response code="200">Return message: 
-            Rating04 - New Rating success.</response>
-            <response code="400">Return error code:<br />
-            Rating02 - Name invalid.<br />
-            Rating03 - Company invalid.</response>
-        </member>
+        <!-- Badly formed XML comment ignored for member "M:SelecaoKey.Api.Controllers.RatingController.New(SelecaoKey.Views.BusinessCrud.ViewCrudRating)" -->
         <member name="M:SelecaoKey.Api.Controllers.RatingController.Update(SelecaoKey.Views.BusinessCrud.ViewCrudRating)">
             <summary>
             Update Rating
             </summary>
             <param name="view">View Rating</param>
             <response code="200">Return message: 
-            Rating06 - Update Rating success.</response>
+            Rating07 - Update Rating success.</response>
             <response code="400">Return error code:<br />
-            Rating02 - Name invalid.<br />
-            Rating03 - Company invalid. <br />
-            Rating05 - Id not found.</response>
+            Rating02 - User not found.<br />
+            Rating03 - Movie not found. <br />
+            Rating04 - Score invalid. <br />
+            Rating06 - Id not found.</response>
         </member>
         <member name="M:SelecaoKey.Api.Controllers.RatingController.Get(System.Int32)">
             <summary>
@@ -162,28 +142,17 @@
             <param name="_service">Service Streaming</param>
             <param name="contextAccessor">Token infomartion</param>
         </member>
-        <member name="M:SelecaoKey.Api.Controllers.StreamingController.New(SelecaoKey.Views.BusinessCrud.ViewCrudStreaming)">
-            <summary>
-            New Streaming
-            </summary>
-            <param name="view">View Streaming</param>
-            <response code="200">Return message: 
-            Streaming04 - New Streaming success.</response>
-            <response code="400">Return error code:<br />
-            Streaming02 - Name invalid.<br />
-            Streaming03 - Company invalid.</response>
-        </member>
+        <!-- Badly formed XML comment ignored for member "M:SelecaoKey.Api.Controllers.StreamingController.New(SelecaoKey.Views.BusinessCrud.ViewCrudStreaming)" -->
         <member name="M:SelecaoKey.Api.Controllers.StreamingController.Update(SelecaoKey.Views.BusinessCrud.ViewCrudStreaming)">
             <summary>
             Update Streaming
             </summary>
             <param name="view">View Streaming</param>
             <response code="200">Return message: 
-            Streaming06 - Update Streaming success.</response>
+            Streaming05 - Update Streaming success.</response>
             <response code="400">Return error code:<br />
             Streaming02 - Name invalid.<br />
-            Streaming03 - Company invalid. <br />
-            Streaming05 - Id not found.</response>
+            Streaming03 - Id not found.</response>
         </member>
         <member name="M:SelecaoKey.Api.Controllers.StreamingController.Get(System.Int32)">
             <summary>

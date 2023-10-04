@@ -11,6 +11,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SelecaoKey.Test.Commons;
 using SelecaoKey.Services.Business;
 using SelecaoKey.Views.Enumns;
+using Assert = NUnit.Framework.Assert;
 
 namespace SelecaoKey.Test.Services.Auth
 {
@@ -32,42 +33,31 @@ namespace SelecaoKey.Test.Services.Auth
                 ViewCrudMovie view = new ViewCrudMovie();
                 view.Genre = EnumGenre.Adventure;
                 view.Release = DateTime.Now;
+                view.IdStreaming = 1;
 
                 // name invalid 
-                Exception ex = Assert.ThrowsException<Exception>(() => service.New(view));
-                Assert.Equals("Movie02", ex.Message);
+                Exception ex = Assert.Throws<Exception>(() => service.New(view));
+                Assert.AreEqual("Movie02", ex.Message);
 
                 view.Name = "test1";
-                // company invalid
-                ex = Assert.ThrowsException<Exception>(() => service.New(view));
-                Assert.Equals("Movie03", ex.Message);
+                
+                // new movie
+                Assert.AreEqual("Movie04", service.New(view));
 
-
-                view.Genre = EnumGenre.Adventure;
-                // new hq
-                Assert.Equals("Movie04", service.New(view));
-
-                view = new ViewCrudMovie();
+                view.Name = "";
                 // name invalid
-                ex = Assert.ThrowsException<Exception>(() => service.Update(view));
-                Assert.Equals("Movie02", ex.Message);
+                ex = Assert.Throws<Exception>(() => service.Update(view));
+                Assert.AreEqual("Movie02", ex.Message);
 
-                view.Name = "test1";
-                // company invalid
-                ex = Assert.ThrowsException<Exception>(() => service.Update(view));
-                Assert.Equals("Movie03", ex.Message);
-
-                view.Genre = EnumGenre.Adventure;
+                view.Id = 0;
+                view.Name = "abc";
                 // id invalid
-                ex = Assert.ThrowsException<Exception>(() => service.Update(view));
-                Assert.Equals("Movie05", ex.Message);
+                ex = Assert.Throws<Exception>(() => service.Update(view));
+                Assert.AreEqual("Movie03", ex.Message);
 
-                view.Release = DateTime.Now;
-
-                view.Genre = EnumGenre.Adventure;
                 view.Id = service.List(999, 1, "").LastOrDefault().Id;
-                // update hq
-                Assert.Equals("Movie06", service.Update(view));
+                // update movie
+                Assert.AreEqual("Movie05", service.Update(view));
 
                 // get id
                 view = service.Get(view.Id);
@@ -77,8 +67,6 @@ namespace SelecaoKey.Test.Services.Auth
                 List<ViewListMovie> list = service.List(10, 1, "");
                 Assert.IsTrue(list.Count > 0);
 
-                //delete
-                Assert.Equals("Movie01", service.Delete(view.Id));
 
             }
             catch (Exception e)

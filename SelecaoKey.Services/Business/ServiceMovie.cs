@@ -96,10 +96,10 @@ namespace SelecaoKey.Services.Business
                 Movie model = service.GetByID(view.Id);
                 if (model == null)
                 {
-                    throw new Exception("Movie05");
+                    throw new Exception("Movie03");
                 }
                 service.Update(model);
-                return "Movie06";
+                return "Movie05";
             }
             catch (Exception e)
             {

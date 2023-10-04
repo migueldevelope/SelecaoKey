@@ -50,7 +50,6 @@ namespace SelecaoKey.Api.Controllers
         /// Movie04 - New Movie success.</response>
         /// <response code="400">Return error code:<br />
         /// Movie02 - Name invalid.<br />
-        /// Movie03 - Company invalid.</response>
         [Authorize]
         [HttpPost]
         [ProducesResponseType(typeof(string), StatusCodes.Status200OK)]
@@ -72,11 +71,10 @@ namespace SelecaoKey.Api.Controllers
         /// </summary>
         /// <param name="view">View Movie</param>
         /// <response code="200">Return message: 
-        /// Movie06 - Update Movie success.</response>
+        /// Movie05 - Update Movie success.</response>
         /// <response code="400">Return error code:<br />
         /// Movie02 - Name invalid.<br />
-        /// Movie03 - Company invalid. <br />
-        /// Movie05 - Id not found.</response>
+        /// Movie03 - Id not found.</response>
         [Authorize]
         [HttpPut]
         [ProducesResponseType(typeof(string), StatusCodes.Status200OK)]

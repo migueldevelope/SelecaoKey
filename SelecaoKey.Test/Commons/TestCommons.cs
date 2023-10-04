@@ -11,7 +11,7 @@ namespace SelecaoKey.Test.Commons
 
         public TestCommons()
         {
-            context = new DataContext("Server=SelecaoKey.database.windows.net;Database=SelecaoKey;User Id=test;Password=x14r53p5!a;");
+            context = new DataContext("Server=45.231.132.153;Database=SelecaoKey;User Id=sa;Password=Bti9010.");
         }
     }
 }

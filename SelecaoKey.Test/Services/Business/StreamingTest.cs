@@ -8,9 +8,12 @@ using Xunit;
 using SelecaoKey.Views.BusinessList;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SelecaoKey.Services.Business;
+using NUnit.Framework;
+using Assert = NUnit.Framework.Assert;
 
 namespace SelecaoKey.Test.Services.Auth
 {
+    [TestClass]
     public class StreamingTest : TestCommons
     {
         private readonly ServiceStreaming service;
@@ -19,6 +22,7 @@ namespace SelecaoKey.Test.Services.Auth
             service = new ServiceStreaming(context);
         }
 
+        [TestMethod]
         [Fact]
         public void CrudStreaming()
         {
@@ -26,35 +30,29 @@ namespace SelecaoKey.Test.Services.Auth
             {
                 ViewCrudStreaming view = new ViewCrudStreaming();
                 
-                // name invalid 
-                Exception ex = Assert.ThrowsException<Exception>(() => service.New(view));
-                Assert.Equals("Streaming02", ex.Message);
+                
+                Exception ex = Assert.Throws<Exception>(() => service.New(view));
+                Assert.AreEqual("Streaming02", ex.Message);
 
                 view.Name = "test1";
-                // company invalid
-                ex = Assert.ThrowsException<Exception>(() => service.New(view));
-                Assert.Equals("Streaming03", ex.Message);
+                // include
+                Assert.AreEqual("Streaming04", service.New(view));
 
-                
+
                 view = new ViewCrudStreaming();
                 // name invalid
-                ex = Assert.ThrowsException<Exception>(() => service.Update(view));
-                Assert.Equals("Streaming02", ex.Message);
+                ex = Assert.Throws<Exception>(() => service.Update(view));
+                Assert.AreEqual("Streaming02", ex.Message);
 
                 view.Name = "test1";
-                // company invalid
-                ex = Assert.ThrowsException<Exception>(() => service.Update(view));
-                Assert.Equals("Streaming03", ex.Message);
 
-                view.Name = "";
                 // id invalid
-                ex = Assert.ThrowsException<Exception>(() => service.Update(view));
-                Assert.Equals("Streaming05", ex.Message);
+                ex = Assert.Throws<Exception>(() => service.Update(view));
+                Assert.AreEqual("Streaming03", ex.Message);
 
-                view.Name = "test1"; 
                 view.Id = service.List(999, 1, "").LastOrDefault().Id;
-                // update hq
-                Assert.Equals("Streaming06", service.Update(view));
+                // update 
+                Assert.AreEqual("Streaming05", service.Update(view));
 
                 // get id
                 view = service.Get(view.Id);
@@ -65,7 +63,7 @@ namespace SelecaoKey.Test.Services.Auth
                 Assert.IsTrue(list.Count > 0);
 
                 //delete
-                Assert.Equals("Streaming01", service.Delete(view.Id));
+                Assert.AreEqual("Streaming01", service.Delete(view.Id));
 
             }
             catch (Exception e)

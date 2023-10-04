@@ -28,7 +28,7 @@ namespace SelecaoKey.Services.Auth
             try
             {
                 service.Delete(id);
-                return "USER01";
+                return "User01";
             }
             catch (Exception e)
             {
@@ -67,15 +67,15 @@ namespace SelecaoKey.Services.Auth
             {
                 if (string.IsNullOrEmpty(view.Name))
                 {
-                    throw new Exception("USER02");
+                    throw new Exception("User02");
                 }
                 if (string.IsNullOrEmpty(view.Mail))
                 {
-                    throw new Exception("USER03");
+                    throw new Exception("User03");
                 }
                 if (string.IsNullOrEmpty(view.Password))
                 {
-                    throw new Exception("USER04");
+                    throw new Exception("User04");
                 }
 
                 service.Insert(new Users()
@@ -84,7 +84,7 @@ namespace SelecaoKey.Services.Auth
                     Mail = view.Mail,
                     Password = Tools.EncryptServices.GetMD5Hash(view.Password)
                 });
-                return "USER05";
+                return "User05";
             }
             catch (Exception e)
             {
@@ -98,20 +98,20 @@ namespace SelecaoKey.Services.Auth
             {
                 if (string.IsNullOrEmpty(view.Name))
                 {
-                    throw new Exception("USER02");
+                    throw new Exception("User02");
                 }
                 if (string.IsNullOrEmpty(view.Mail))
                 {
-                    throw new Exception("USER03");
+                    throw new Exception("User03");
                 }
                 if (string.IsNullOrEmpty(view.Password))
                 {
-                    throw new Exception("USER04");
+                    throw new Exception("User04");
                 }
                 Users model = service.GetByID(view.Id);
                 if (model == null)
                 {
-                    throw new Exception("USER06");
+                    throw new Exception("User06");
                 }
                 model.Name = view.Name;
                 model.Mail = view.Mail;
@@ -121,7 +121,7 @@ namespace SelecaoKey.Services.Auth
                     model.Password = password;
                 }
                 service.Update(model);
-                return "USER07";
+                return "User07";
             }
             catch (Exception e)
             {

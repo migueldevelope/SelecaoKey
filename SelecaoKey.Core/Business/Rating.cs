@@ -10,8 +10,8 @@ namespace SelecaoKey.Core.Business
     [Table("Rating")]
     public class Rating : BaseEntity
     {
-        public int IdUser { get; set; }
-        public int IdMovie { get; set; }
+        public int? IdUser { get; set; }
+        public int? IdMovie { get; set; }
         public int Score { get; set; }
         public string Comments { get; set; }
 

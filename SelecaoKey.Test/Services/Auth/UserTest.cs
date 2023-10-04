@@ -8,9 +8,11 @@ using SelecaoKey.Views.BusinessCrud;
 using Xunit;
 using SelecaoKey.Views.BusinessList;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Assert = NUnit.Framework.Assert;
 
 namespace SelecaoKey.Test.Services.Auth
 {
+    [TestClass]
     public class UserTest : TestCommons
     {
         private readonly ServiceUser service;
@@ -19,6 +21,7 @@ namespace SelecaoKey.Test.Services.Auth
             service = new ServiceUser(context);
         }
 
+        [TestMethod]
         [Fact]
         public void CrudUser()
         {
@@ -27,46 +30,46 @@ namespace SelecaoKey.Test.Services.Auth
                 ViewCrudUser view = new ViewCrudUser();
 
                 // name invalid 
-                Exception ex = Assert.ThrowsException<Exception>(() => service.New(view));
-                Assert.Equals("USER02", ex.Message);
+                Exception ex = Assert.Throws<Exception>(() => service.New(view));
+                Assert.AreEqual("User02", ex.Message);
 
                 view.Name = "test1";
                 // mail invalid
-                ex = Assert.ThrowsException<Exception>(() => service.New(view));
-                Assert.Equals("USER03", ex.Message);
+                ex = Assert.Throws<Exception>(() => service.New(view));
+                Assert.AreEqual("User03", ex.Message);
 
                 view.Mail = "test1@ploomes.com.br";
                 // pass invalid
-                ex = Assert.ThrowsException<Exception>(() => service.New(view));
-                Assert.Equals("USER04", ex.Message);
+                ex = Assert.Throws<Exception>(() => service.New(view));
+                Assert.AreEqual("User04", ex.Message);
 
                 view.Password = "123";
                 // new user
-                Assert.Equals("USER05", service.New(view));
+                Assert.AreEqual("User05", service.New(view));
 
                 view = new ViewCrudUser();
                 // name invalid
-                ex = Assert.ThrowsException<Exception>(() => service.Update(view));
-                Assert.Equals("USER02", ex.Message);
+                ex = Assert.Throws<Exception>(() => service.Update(view));
+                Assert.AreEqual("User02", ex.Message);
 
                 view.Name = "test1";
                 // mail invalid
-                ex = Assert.ThrowsException<Exception>(() => service.Update(view));
-                Assert.Equals("USER03", ex.Message);
+                ex = Assert.Throws<Exception>(() => service.Update(view));
+                Assert.AreEqual("User03", ex.Message);
 
                 view.Mail = "test1@ploomes.com.br";
                 // pass invalid
-                ex = Assert.ThrowsException<Exception>(() => service.Update(view));
-                Assert.Equals("USER04", ex.Message);
+                ex = Assert.Throws<Exception>(() => service.Update(view));
+                Assert.AreEqual("User04", ex.Message);
 
                 view.Password = "123";
                 // id invalid
-                ex = Assert.ThrowsException<Exception>(() => service.Update(view));
-                Assert.Equals("USER06", ex.Message);
+                ex = Assert.Throws<Exception>(() => service.Update(view));
+                Assert.AreEqual("User06", ex.Message);
 
                 view.Id = service.List(999, 1, "").LastOrDefault().Id;
                 // update user
-                Assert.Equals("USER07", service.Update(view));
+                Assert.AreEqual("User07", service.Update(view));
 
                 // get id
                 view = service.Get(view.Id);
@@ -77,7 +80,7 @@ namespace SelecaoKey.Test.Services.Auth
                 Assert.IsTrue(list.Count > 0);
 
                 //delete
-                Assert.Equals("USER01", service.Delete(view.Id));
+                Assert.AreEqual("User01", service.Delete(view.Id));
 
             }
             catch (Exception e)

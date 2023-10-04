@@ -135,3 +135,4 @@ C:\selecaokey\SelecaoKey\SelecaoKey.Test\bin\Debug\netcoreapp3.1\runtimes\win-x8
 C:\selecaokey\SelecaoKey\SelecaoKey.Test\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.0\System.Runtime.Caching.dll
 C:\selecaokey\SelecaoKey\SelecaoKey.Test\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
 C:\selecaokey\SelecaoKey\SelecaoKey.Test\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\selecaokey\SelecaoKey\SelecaoKey.Test\bin\Debug\netcoreapp3.1\nunit.framework.dll

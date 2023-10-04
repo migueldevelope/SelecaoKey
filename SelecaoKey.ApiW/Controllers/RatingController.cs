@@ -47,10 +47,11 @@ namespace SelecaoKey.Api.Controllers
         /// </summary>
         /// <param name="view">View Rating</param>
         /// <response code="200">Return message: 
-        /// Rating04 - New Rating success.</response>
+        /// Rating05 - New Rating success.</response>
         /// <response code="400">Return error code:<br />
-        /// Rating02 - Name invalid.<br />
-        /// Rating03 - Company invalid.</response>
+        /// Rating02 - User not found.<br />
+        /// Rating03 - Movie not found. <br />
+        /// Rating04 - Score invalid. <br />
         [Authorize]
         [HttpPost]
         [ProducesResponseType(typeof(string), StatusCodes.Status200OK)]
@@ -72,11 +73,12 @@ namespace SelecaoKey.Api.Controllers
         /// </summary>
         /// <param name="view">View Rating</param>
         /// <response code="200">Return message: 
-        /// Rating06 - Update Rating success.</response>
+        /// Rating07 - Update Rating success.</response>
         /// <response code="400">Return error code:<br />
-        /// Rating02 - Name invalid.<br />
-        /// Rating03 - Company invalid. <br />
-        /// Rating05 - Id not found.</response>
+        /// Rating02 - User not found.<br />
+        /// Rating03 - Movie not found. <br />
+        /// Rating04 - Score invalid. <br />
+        /// Rating06 - Id not found.</response>
         [Authorize]
         [HttpPut]
         [ProducesResponseType(typeof(string), StatusCodes.Status200OK)]

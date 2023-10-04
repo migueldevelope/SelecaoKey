@@ -65,9 +65,17 @@ namespace SelecaoKey.Services.Business
         {
             try
             {
-                if (string.IsNullOrEmpty(view.Comments))
+                if (view.IdUser == null)
                 {
                     throw new Exception("Rating02");
+                }
+                if (view.IdMovie == null)
+                {
+                    throw new Exception("Rating03");
+                }
+                if ((view.Score < 1)|| (view.Score > 5))
+                {
+                    throw new Exception("Rating04");
                 }
                 service.Insert(new Rating()
                 {
@@ -76,7 +84,7 @@ namespace SelecaoKey.Services.Business
                     IdUser = view.IdUser,
                     Score = view.Score
                 });
-                return "Rating04";
+                return "Rating05";
             }
             catch (Exception e)
             {
@@ -88,17 +96,26 @@ namespace SelecaoKey.Services.Business
         {
             try
             {
-                if (string.IsNullOrEmpty(view.Comments))
+
+                if (view.IdUser == null)
                 {
                     throw new Exception("Rating02");
+                }
+                if (view.IdMovie == null)
+                {
+                    throw new Exception("Rating03");
+                }
+                if ((view.Score < 1) || (view.Score > 5))
+                {
+                    throw new Exception("Rating04");
                 }
                 Rating model = service.GetByID(view.Id);
                 if (model == null)
                 {
-                    throw new Exception("Rating05");
+                    throw new Exception("Rating06");
                 }
                 service.Update(model);
-                return "Rating06";
+                return "Rating07";
             }
             catch (Exception e)
             {
