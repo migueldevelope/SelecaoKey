@@ -3,7 +3,10 @@ using SelecaoKey.Views.BusinessCrud;
 using SelecaoKey.Views.BusinessList;
 using SelecaoKey.Views.Enumns;
 using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Linq;
 
 namespace SelecaoKey.Core.Business
 {
@@ -15,6 +18,9 @@ namespace SelecaoKey.Core.Business
         public EnumGenre Genre { get; set; }
         public DateTime? Release { get; set; }
 
+        // [ForeignKey("idMovie")]
+        public ICollection<Rating> Ratings { get; set; }
+
         public ViewListMovie GetViewList()
         {
             return new ViewListMovie()
@@ -22,6 +28,7 @@ namespace SelecaoKey.Core.Business
                 Id = Id,
                 Name = Name,
                 Release = Release == null ? "" : Release.Value.ToString("MM/yyyy"),
+                Ratings = Ratings?.Select(p => p.GetViewList())?.ToList()
             };
         }
 

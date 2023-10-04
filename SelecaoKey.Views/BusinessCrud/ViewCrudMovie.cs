@@ -9,5 +9,6 @@ namespace SelecaoKey.Views.BusinessCrud
         public int IdStreaming { get; set; }
         public EnumGenre Genre { get; set; }
         public DateTime? Release { get; set; }
+
     }
 }

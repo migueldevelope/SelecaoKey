@@ -15,3 +15,6 @@ C:\selecaokey\SelecaoKey\SelecaoKey.Data\bin\Debug\netcoreapp3.1\Tools.pdb
 C:\selecaokey\SelecaoKey\SelecaoKey.Data\obj\Debug\netcoreapp3.1\SelecaoKey.Data.csproj.CopyComplete
 C:\selecaokey\SelecaoKey\SelecaoKey.Data\obj\Debug\netcoreapp3.1\SelecaoKey.Data.dll
 C:\selecaokey\SelecaoKey\SelecaoKey.Data\obj\Debug\netcoreapp3.1\SelecaoKey.Data.pdb
+C:\selecaokey\SelecaoKey\SelecaoKey.Data\bin\Debug\netcoreapp3.1\SelecaoKey.Data.runtimeconfig.json
+C:\selecaokey\SelecaoKey\SelecaoKey.Data\bin\Debug\netcoreapp3.1\SelecaoKey.Data.runtimeconfig.dev.json
+C:\selecaokey\SelecaoKey\SelecaoKey.Data\obj\Debug\netcoreapp3.1\SelecaoKey.Data.genruntimeconfig.cache

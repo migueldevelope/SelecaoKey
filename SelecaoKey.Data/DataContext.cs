@@ -1,7 +1,4 @@
-﻿using System;
-using System.Numerics;
-using System.Reflection.Emit;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using SelecaoKey.Core.Business;
 
 namespace SelecaoKey.Data
@@ -28,7 +25,11 @@ namespace SelecaoKey.Data
             builder.Entity<Users>(entity => entity.ToTable("Users").HasKey(p => p.Id));
             builder.Entity<Streaming>(entity => entity.ToTable("Streaming").HasKey(p => p.Id));
             builder.Entity<Movie>(entity => entity.ToTable("Movie").HasKey(p => p.Id));
-            builder.Entity<Rating>(entity => entity.ToTable("Rating").HasKey(p => p.Id));
+            builder.Entity<Rating>(entity =>
+                entity
+                .ToTable("Rating")
+                .HasKey(p => p.Id)
+            );
 
             base.OnModelCreating(builder);
         }
