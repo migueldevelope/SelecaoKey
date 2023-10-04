@@ -238,6 +238,24 @@ namespace SelecaoKey.Api.Controllers
             }
         }
 
+        // Questao 5
+        [Authorize]
+        [HttpGet]
+        [Route("averagegenrerealeseratings")]
+        [ProducesResponseType(typeof(List<ViewListAverageGenreRealeseRatings>), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(string), StatusCodes.Status400BadRequest)]
+        public IActionResult AverageGenreRealeseRatings()
+        {
+            try
+            {
+                return Ok(service.AverageGenreRealeseRatings());
+            }
+            catch (Exception e)
+            {
+                return BadRequest(e.Message);
+            }
+        }
+
         #endregion
 
     }

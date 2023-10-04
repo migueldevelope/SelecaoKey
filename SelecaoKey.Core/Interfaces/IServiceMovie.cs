@@ -12,6 +12,7 @@ namespace SelecaoKey.Core.Interfaces
         public List<ViewListMovie> List(int pageSize, int page, string filter);
         public string Delete(int id);
         public List<ViewListAverageMovieRating> AverageMovieRatings();
+        public List<ViewListAverageGenreRealeseRatings> AverageGenreRealeseRatings();
         public List<ViewListMovieRealease> MovieRealeases();
         public List<ViewListQuantityMovieStreamings> QuantityMovieStreamings();
         public List<ViewListMovie> ListFilterCommentsScore(int pageSize, int page, string commets, int score);

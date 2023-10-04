@@ -26,6 +26,21 @@ namespace SelecaoKey.Services.Business
             serviceMovieStreaming = new Repository<MovieStreaming>(context);
         }
 
+        public List<ViewListAverageGenreRealeseRatings> AverageGenreRealeseRatings()
+        {
+            var ratings = serviceRating.Get();
+            var list = (from mov in service.Get()
+                        group mov by new { mov.Genre, mov.Release, ratings = ratings.Where(p => p.IdMovie == mov.Id).ToList() } into movs
+                        select new ViewListAverageGenreRealeseRatings()
+                        {
+                            Genre = movs.Key.Genre,
+                            Realease = movs.Key.Release.Value.ToString("MM/yyyy"),
+                            Rating = ratings.Count() == 0 ? 0 : (int)Math.Round(ratings.Average(p => p.Score), 0)
+                        }).ToList();
+
+            return list;
+        }
+
         public List<ViewListAverageMovieRating> AverageMovieRatings()
         {
             var ratings = serviceRating.Get();
